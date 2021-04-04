@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  data:
+    cassandra:
+      contact-points: cassandra
+      keyspace-name: reference_keyspace
+      local-datacenter: datacenter1
+      password: ''
+      port: 9042
+      username: ''
+
+logging:
+  level:
+    root: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p --- [%15.15t] %-40.40logger{39} :: %X{correlationId} : %m%n%ex{full}"
